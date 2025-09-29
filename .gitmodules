@@ -1,0 +1,12 @@
+[submodule ".oh-my-zsh/custom/themes/powerlevel10k"]
+	path = .oh-my-zsh/custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule ".oh-my-zsh/custom/plugins/fzf-zsh-plugin"]
+	path = .oh-my-zsh/custom/plugins/fzf-zsh-plugin
+	url = https://github.com/unixorn/fzf-zsh-plugin.git
+[submodule ".oh-my-zsh/custom/plugins/fzf-tab"]
+	path = .oh-my-zsh/custom/plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab
