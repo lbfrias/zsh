@@ -126,3 +126,7 @@ export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
 ## User Aliases
 # Replace ls with eza
 alias ls='eza -la --color=always --group-directories-first --icons=always'
+if [ "$(uname -s)" = "Linux" ]; then
+    alias dark="gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+    alias light="gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'"
+fi
