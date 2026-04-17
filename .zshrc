@@ -35,7 +35,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -126,8 +126,8 @@ export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
 ## User Aliases
 # Replace ls with eza
 alias ls='eza -la --color=always --group-directories-first --icons=always'
-if [ "$(uname -s)" = "Linux" ]; then
-    alias dark="gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' && makoctl mode -r light"
-    alias light="gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-light' && makoctl mode -a light"
+
+# Load machine-specific settings if the file exists
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
 fi
-alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
