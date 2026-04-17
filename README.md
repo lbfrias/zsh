@@ -1,7 +1,7 @@
 # zsh
 zsh + oh-my-zsh + powerlevel10k
 
-### Dependencies:
+### Recommended software:
 - zsh
 - eza
 - chafa
