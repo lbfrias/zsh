@@ -126,6 +126,7 @@ export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
 ## User Aliases
 # Replace ls with eza
 alias ls='eza -la --color=always --group-directories-first --icons=always'
+command -v nvim &>/dev/null && alias vim='nvim'
 
 # Load machine-specific settings if the file exists
 if [[ -f ~/.zshrc.local ]]; then
