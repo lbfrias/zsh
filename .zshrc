@@ -120,12 +120,9 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-## User Environment Variables
-export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
-
 ## User Aliases
 # Replace ls with eza
-alias ls='eza -la --color=always --group-directories-first --icons=always'
+command -v eza &>/dev/null && ls='eza -la --color=always --group-directories-first --icons=always'
 command -v nvim &>/dev/null && alias vim='nvim'
 
 # Load machine-specific settings if the file exists
