@@ -122,7 +122,7 @@ source $ZSH/oh-my-zsh.sh
 
 ## User Aliases
 # Replace ls with eza
-command -v eza &>/dev/null && ls='eza -la --color=always --group-directories-first --icons=always'
+command -v eza &>/dev/null && alias ls='eza -la --color=always --group-directories-first --icons=always'
 command -v nvim &>/dev/null && alias vim='nvim'
 
 # Load machine-specific settings if the file exists
