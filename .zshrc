@@ -133,3 +133,6 @@ command -v batman &>/dev/null && alias man='batman --pager=less'
 if [[ -f ~/.zshrc.local ]]; then
     source ~/.zshrc.local
 fi
+
+# Enable case-insensitive completion and allow partial matches
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} l:|=* r:|=*'
