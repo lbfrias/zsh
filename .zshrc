@@ -121,9 +121,13 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ## User Aliases
-# Replace ls with eza
+# Replace tools with their enhanced versions if available
 command -v eza &>/dev/null && alias ls='eza -la --color=always --group-directories-first --icons=always'
 command -v nvim &>/dev/null && alias vim='nvim'
+command -v bat &>/dev/null && alias cat='bat --paging=never'
+command -v bat &>/dev/null && alias less='bat --paging=always'
+command -v batman &>/dev/null && alias man='batman --pager=less'
+
 
 # Load machine-specific settings if the file exists
 if [[ -f ~/.zshrc.local ]]; then
